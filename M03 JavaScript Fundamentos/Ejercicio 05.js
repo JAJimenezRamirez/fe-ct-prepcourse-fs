@@ -7,47 +7,72 @@ function esPositivo(num) {
    // Si el número es positivo ---> "Es positivo".
    // Si el número es negativo ---> "Es negativo".
    // Si el número es 0, devuelve false.
+
    // Tu código:
+   if (num > 0) {
+   console.log('es positivo');
+   return true;
+} else {
+   console.log('es negativo');
+   return false;
+   }
 }
 
 function agregarSimboloExclamacion(str) {
    // Agrega un símbolo de exclamación al final del string "str" y retórnalo
    // Ejemplo: "hello world" ---> "hello world!"
    // Tu código:
+   return str + '!' 
+   
+
 }
 
 function combinarNombres(nombre, apellido) {
    // Retorna "nombre" y "apellido" combinados en un mismo string pero separados por un espacio.
    // Ejemplo: ("Soy", "Henry") ---> "Soy Henry"
    // Tu código:
+   
+   return nombre + '' + apellido;
 }
 
 function obtenerSaludo(nombre) {
    // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
    // Ejemplo: "Martin" ---> "Hola Martin!"
    // Tu código:
+   var saludo = 'hola' + nombre + '!'; 
+   return saludo; 
+
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
    // Retornar el área de un rectángulo teniendo su altura y ancho.
    // Tu código:
+   var area = alto * ancho;
+   return area;
 }
 
 function retornarPerimetro(lado) {
    // La función recibe como argumento la medida de un lado de un cuadrado.
    // Debes retornar su perímetro.
    // Tu código:
+   var perimetro = lado * 4;
+   return perimetro;
 }
 
 function areaDelTriangulo(base, altura) {
    // Calcula el área de un triángulo y retorna el resultado.
    // Tu código:
+   var area = base * altura / 2;
+   return area; 
 }
 
 function deEuroAdolar(euro) {
    // Supongamos que 1 euro equivale a 1.20 dólares.
    // Debes calcular el valor recibido como argumento pasándolo a dolares.
    // Tu código:
+   var tipoDeCambio = 1.20; 
+   var dolar = euro * tipoDeCambio;
+   return dolar; 
 }
 
 function esVocal(letra) {
@@ -55,7 +80,20 @@ function esVocal(letra) {
    // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
    // Tu código:
-}
+   if (letra.length ! == 1) {
+      console.log('dato incorrecto');
+      return false;
+   }
+   var vocal = ['a','e','i','o','o'];
+   
+   if(vocal.includes(letra.tolowercase())) {
+      console.log('es vocal');
+      return true;
+   } else {
+      console.log('dato incorrecto');
+      return false;
+      }
+   }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
